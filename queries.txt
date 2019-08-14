@@ -1,0 +1,6 @@
+#count port 445 in certain country and region
+shodan count "country:CA region:NB port:445" 
+
+#Search SMB Authentication enabled and SMB version 1
+port:445 country:CA region:NB "SMB Status Authentication: enabled SMB Version: 1"
+
