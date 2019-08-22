@@ -4,3 +4,16 @@ shodan count "country:CA region:NB port:445"
 #Search SMB Authentication enabled and SMB version 1
 port:445 country:CA region:NB "SMB Status Authentication: enabled SMB Version: 1"
 
+#Get Info for account
+Shodan info
+
+#Search port 445 and download the results
+shodan download Port44_NB_August_2019 port:445 country:CA region:NB
+
+#PowerShell command to read JSON file
+Get-Content ./Port445_NB_August_2019.json | ConvertFrom-Json
+
+#Powershell command to extract IP and Data field
+Get-Content ./Port445_NB_August_2019.json | ConvertFrom-Json | Select-Object ip_str,data | Where-Object {$_.data -like "*enabled*"}| fl
+
+
