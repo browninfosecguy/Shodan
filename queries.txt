@@ -10,6 +10,9 @@ Shodan info
 #Search port 445 and download the results
 shodan download Port44_NB_August_2019 port:445 country:CA region:NB
 
+#Search UPnP 
+shodan download UPNP_NB_AUG_2019 upnp country:CA region:NB
+
 #PowerShell command to read JSON file
 Get-Content ./Port445_NB_August_2019.json | ConvertFrom-Json
 
