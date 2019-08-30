@@ -19,4 +19,7 @@ Get-Content ./Port445_NB_August_2019.json | ConvertFrom-Json
 #Powershell command to extract IP and Data field
 Get-Content ./Port445_NB_August_2019.json | ConvertFrom-Json | Select-Object ip_str,data | Where-Object {$_.data -like "*enabled*"}| fl
 
+#Shodan command download Linux OS
+shodan download Linux_2.6.x_NB_Aug country:CA region:NB os:Linux
+
 
