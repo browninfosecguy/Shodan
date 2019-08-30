@@ -22,4 +22,7 @@ Get-Content ./Port445_NB_August_2019.json | ConvertFrom-Json | Select-Object ip_
 #Shodan command download Linux OS
 shodan download Linux_2.6.x_NB_Aug country:CA region:NB os:Linux
 
+#Shodan download Windows server 2008 r2
+shodan download windows2008r2_NB_Aug "os:'Windows Server 2008 r2' country:CA region:NB"
+
 
